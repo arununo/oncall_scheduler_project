@@ -1,0 +1,34 @@
+{
+  "version": "41.0.0",
+  "files": {
+    "4d1dbf17c3d37ea6c7fd3402a6a9e3cda4a91050496930bdb81cc0b51a954432": {
+      "displayName": "OnCallRotationLambda/Code",
+      "source": {
+        "path": "asset.4d1dbf17c3d37ea6c7fd3402a6a9e3cda4a91050496930bdb81cc0b51a954432",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "4d1dbf17c3d37ea6c7fd3402a6a9e3cda4a91050496930bdb81cc0b51a954432.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "dd6c8812542fe65b4937e419dda9699a7f288d320226a3235e99a19e3d86b16e": {
+      "displayName": "OnCallSchedulerStack Template",
+      "source": {
+        "path": "OnCallSchedulerStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "dd6c8812542fe65b4937e419dda9699a7f288d320226a3235e99a19e3d86b16e.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

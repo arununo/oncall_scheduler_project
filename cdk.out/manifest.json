@@ -1,0 +1,114 @@
+{
+  "version": "41.0.0",
+  "artifacts": {
+    "OnCallSchedulerStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "OnCallSchedulerStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "OnCallSchedulerStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "OnCallSchedulerStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/dd6c8812542fe65b4937e419dda9699a7f288d320226a3235e99a19e3d86b16e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "OnCallSchedulerStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "OnCallSchedulerStack.assets"
+      ],
+      "metadata": {
+        "/OnCallSchedulerStack/OnCallUsers/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnCallUsers8D479315"
+          }
+        ],
+        "/OnCallSchedulerStack/OnCallSchedule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnCallSchedule0D1DFB9D"
+          }
+        ],
+        "/OnCallSchedulerStack/OnCallRotationLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnCallRotationLambdaServiceRole74A3D32F"
+          }
+        ],
+        "/OnCallSchedulerStack/OnCallRotationLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnCallRotationLambdaServiceRoleDefaultPolicy006E1C49"
+          }
+        ],
+        "/OnCallSchedulerStack/OnCallRotationLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnCallRotationLambda9688EE47"
+          }
+        ],
+        "/OnCallSchedulerStack/WeeklyRotationRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WeeklyRotationRuleF7EC4AC4"
+          }
+        ],
+        "/OnCallSchedulerStack/WeeklyRotationRule/AllowEventRuleOnCallSchedulerStackOnCallRotationLambda76669D25": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "WeeklyRotationRuleAllowEventRuleOnCallSchedulerStackOnCallRotationLambda76669D25923F6C08"
+          }
+        ],
+        "/OnCallSchedulerStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/OnCallSchedulerStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/OnCallSchedulerStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/OnCallSchedulerStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "OnCallSchedulerStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  },
+  "minimumCliVersion": "2.1005.0"
+}

@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>On-Call Scheduler</title>
+</head>
+<body>
+    <h1>Current On-Call</h1>
+    {% if oncall %}
+        <p>Week Start: {{ oncall['week_start'] }}</p>
+        <p>User ID: {{ oncall['oncall_user_id'] }}</p>
+    {% else %}
+        <p>No on-call user scheduled.</p>
+    {% endif %}
+</body>
+</html>
